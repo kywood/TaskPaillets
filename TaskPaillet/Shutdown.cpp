@@ -4,7 +4,7 @@
 bool _shutdown = false;
 void shutdownServer()
 {
-	//SLog(L"### server shutdown!!! ###");
+	SLog((WCHAR*)L"### server shutdown!!! ###");
 
 	//현재 접속중 모든 유저들 세션 종료
 	//서버 데이터 정리 (랭킹이나 ...)

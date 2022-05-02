@@ -5,6 +5,7 @@
 
 
 class Work;
+
 class TaskNode
 {
 	Work*		workObject_;
@@ -21,9 +22,6 @@ public:
 
 	void tick();
 };
-
-
-
 
 //---------------------------------------------------------------------//
 class Task

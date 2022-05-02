@@ -42,6 +42,7 @@
 #include "Lock.h"
 
 #include "Clock.h"
+#include "Monitoring.h"
 
 #include "Shutdown.h"
 

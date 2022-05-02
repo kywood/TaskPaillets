@@ -143,6 +143,7 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Lock.h" />
     <ClInclude Include="Logger.h" />
+    <ClInclude Include="Monitoring.h" />
     <ClInclude Include="Shutdown.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="Task.h" />
@@ -155,6 +156,7 @@
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="Lock.cpp" />
     <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="Runner.cpp" />
     <ClCompile Include="Shutdown.cpp" />
     <ClCompile Include="Task.cpp" />
     <ClCompile Include="Thread.cpp" />

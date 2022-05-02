@@ -65,10 +65,13 @@ void Task::remove(TaskNode *taskNode)
 
 void Task::process()
 {
-	while (!_shutdown) {
+	while (!_shutdown)
+	{
 		std::vector<TaskNode *> deleteNodes;
-		for (auto taskNode : taskList_) {
-			if (taskNode->expired()) {
+		for (auto taskNode : taskList_) 
+		{
+			if (taskNode->expired()) 
+			{
 				deleteNodes.push_back(taskNode);
 				continue;
 			}
@@ -94,7 +97,17 @@ TaskManager::TaskManager()
 	if (!loadConfig(&config)) {
 		return;
 	}*/
-	/*this->initialize(&config);*/
+
+	char* orig = (char*)"Hello, World!";
+	size_t newsize = strlen(orig) + 1;
+
+	wchar_t* wcstring = new wchar_t[newsize];
+
+	size_t convertedChars = 0;
+	mbstowcs_s(&convertedChars, wcstring, newsize, orig, _TRUNCATE);
+
+
+	this->initialize(wcstring);
 }
 
 void TaskManager::initialize(WCHAR *config)
@@ -113,6 +126,16 @@ void TaskManager::initialize(WCHAR *config)
 		task->run();
 	}
 	SLog(L"* task thread, [%d] maked", threadCount_);*/
+
+	threadCount_ = 2;
+
+	for (int i = 0; i < threadCount_; ++i) {
+		Task* task = new Task(i);
+		taskPool_.push_back(task);
+		task->run();
+	}
+	SLog((WCHAR*)L"* task thread, [%d] maked", threadCount_);
+
 }
 
 TaskManager::~TaskManager()
@@ -130,7 +153,7 @@ void TaskManager::add(Work *workObject, int freqSec, int durationSec)
 	}
 	static int nodeCount = 0;
 	
-	TaskNode *node = new TaskNode(workObject, freqSec, durationSec);
+ 	TaskNode *node = new TaskNode(workObject, freqSec, durationSec);
 	int index = nodeCount % threadCount_;
 	Task *task = taskPool_[index];
 	task->add(node);
