@@ -19,5 +19,46 @@
     <ClInclude Include="Thread.h">
       <Filter>Src</Filter>
     </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="Lock.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="Clock.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="Shutdown.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Thread.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Lock.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Task.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Clock.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Shutdown.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

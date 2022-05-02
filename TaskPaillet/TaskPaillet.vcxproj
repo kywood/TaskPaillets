@@ -139,10 +139,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Clock.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Lock.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="Shutdown.h" />
+    <ClInclude Include="Singleton.h" />
     <ClInclude Include="Task.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Thread.h" />
     <ClInclude Include="Type.h" />
+    <ClInclude Include="Util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="Lock.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="Shutdown.cpp" />
+    <ClCompile Include="Task.cpp" />
+    <ClCompile Include="Thread.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
